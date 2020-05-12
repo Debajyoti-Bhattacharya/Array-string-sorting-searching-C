@@ -1,0 +1,47 @@
+Input:
+#include <stdio.h>
+int main()
+{
+int matrix[20][20];
+int i,j,r;
+   
+scanf("%d", &r); //Accepts number of rows or columns
+
+    for(i=0;i< r;i++) //Accepts the matrix elements from the test case data
+    {
+        for(j=0;j<r; j++)
+        {
+            scanf("%d",&matrix[i][j]);
+        }
+    }
+
+/* Complete the program to get the desired output. Use the printf() statement as
+printf("%d ", matrix[i][j]);
+*/
+
+for(i=0;i<r;i++)
+{
+  for(j=0;j<r;j++)
+  {
+    if(j>i)
+    {
+      	printf("0 ");
+	}
+	else
+	{
+		printf("%d ", matrix[i][j]);
+	}
+  }
+  printf("\n");
+}
+}
+Output:
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
+
+1 0 0 0 \n
+2 2 0 0 \n
+3 3 3 0 \n
+4 4 4 4 \n
