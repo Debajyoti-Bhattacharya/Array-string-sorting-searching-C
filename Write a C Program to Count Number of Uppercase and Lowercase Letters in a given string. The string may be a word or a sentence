@@ -1,0 +1,38 @@
+Input:
+#include<stdio.h>
+int main() {
+   int upper = 0, lower = 0;
+   char ch[100];
+   scanf(" %[^\n]s", ch);  /*A word or a sentence is accepted from test case data */
+
+/* Complete the remaining part of the code to store number of uppercase letters
+in the variable upper and lowercase letters in variable lower.
+The print part of already written. You can declare any variable if necessary */
+
+int i,j, c;
+for(j=0;ch[j]!='\0';++j);
+for (i = 0; i<j; ++i)
+{
+  c=(int)ch[i];
+  if(c>64&&c<91)
+  {
+    upper++;
+  }
+  if(c>96&&c<123)
+  {
+    lower++;
+  }
+}
+   printf("Uppercase Letters : %d\n", upper); /*prints number of uppercase letters */
+   printf("Lowercase Letters : %d\n", lower); /*prints number of lowercase letters */
+ 
+   return (0);
+}
+Output:
+Problem Solving through Programming in C.
+Uppercase Letters : 4\n
+Lowercase Letters : 31\n
+
+AICTE Approved FDP Course
+Uppercase Letters : 10\n
+Lowercase Letters : 12\n
