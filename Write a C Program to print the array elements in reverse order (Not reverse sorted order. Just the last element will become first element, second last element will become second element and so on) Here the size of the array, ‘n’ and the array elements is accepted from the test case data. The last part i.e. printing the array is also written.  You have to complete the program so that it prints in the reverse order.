@@ -1,0 +1,55 @@
+Input:
+#include<stdio.h>
+ 
+int main() {
+   int arr[20], i, n;
+ 
+   scanf("%d", &n); /* Accepts the number of elements in the array */
+
+  for (i = 0; i < n; i++) 
+     scanf("%d", &arr[i]); /*Accepts the elements of the array */
+
+int j, Temp;
+j = i - 1;   // Assigning j to Last array element
+    i = 0;       // Assigning i to first array element
+ 
+   while (i < j) 
+   {
+      Temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = Temp;
+      i++;             
+      j--;         
+   }
+for (i = 0; i < n; i++) {
+      printf("%d\n", arr[i]); // For printing the array elements 
+   }
+ 
+   return (0);
+}
+
+Output:
+10
+20
+30
+40
+50
+ 50\n
+40\n
+30\n
+20\n
+10\n
+
+
+41
+42
+43
+44
+45
+46
+ 46\n
+45\n
+44\n
+43\n
+42\n
+41\n
